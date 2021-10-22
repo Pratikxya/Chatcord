@@ -1,19 +1,19 @@
 import path from "path";
 import http from "http";
 import express from "express";
-import socketio from "socket.io";
-//const formatMessage = require("./utils/messages");
-import formatMessage from ("./utils/messages");
-import
-  {userJoin,
+import { Server } from "socket.io";
+import formatMessage from "./utils/messages.js";
+import {
+  userJoin,
   getCurrentUser,
   userLeave,
-  getRoomUsers}
-from ("./utils/users");
+  getRoomUsers,
+} from "./utils/users.js";
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = new Server(server);
+const __dirname = path.resolve();
 
 //Set static folder
 app.use(express.static(path.join(__dirname, "public")));
