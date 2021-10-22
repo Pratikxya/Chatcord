@@ -10,6 +10,7 @@
   },
   "keywords": [],
   "author": "Pratikshya",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

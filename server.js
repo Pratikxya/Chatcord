@@ -1,14 +1,15 @@
-const path = require("path");
-const http = require("http");
-const express = require("express");
-const socketio = require("socket.io");
-const formatMessage = require("./utils/messages");
-const {
-  userJoin,
+import path from "path";
+import http from "http";
+import express from "express";
+import socketio from "socket.io";
+//const formatMessage = require("./utils/messages");
+import formatMessage from ("./utils/messages");
+import
+  {userJoin,
   getCurrentUser,
   userLeave,
-  getRoomUsers,
-} = require("./utils/users");
+  getRoomUsers}
+from ("./utils/users");
 
 const app = express();
 const server = http.createServer(app);
